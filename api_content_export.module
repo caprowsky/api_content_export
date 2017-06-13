@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the api content export feature.
+ */
+
+include_once 'api_content_export.features.inc';
