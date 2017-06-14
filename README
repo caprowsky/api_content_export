@@ -1,4 +1,4 @@
-Procedura di installazione delle feature:
+Procedura di installazione della feature:
 
 $ drush dl views_datasource 
 $ drush en views_json -y
