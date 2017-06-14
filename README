@@ -1,0 +1,6 @@
+Procedura di installazione delle feature:
+
+$ drush dl views_datasource 
+$ drush en views_json -y
+$ drush en api_content_export -y
+
