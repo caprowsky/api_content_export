@@ -153,7 +153,16 @@ function api_content_export_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'faq' => 'faq',
   );
-  $handler->display->display_options['path'] = 'si7_faq';
+  /* Filter criterion: Contenuto: Albero navigazione (field_albero_navigazione) */
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['id'] = 'field_albero_navigazione_tid';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['table'] = 'field_data_field_albero_navigazione';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['field'] = 'field_albero_navigazione_tid';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['value'] = array(
+    0 => '1214',
+  );
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['vocabulary'] = 'albero_di_navigazione';
+  $handler->display->display_options['path'] = 'si7_faq_faq';
 
   /* Display: glossario */
   $handler = $view->new_display('services', 'glossario', 'services_2');
@@ -244,6 +253,40 @@ function api_content_export_views_default_views() {
   );
   $handler->display->display_options['fields']['field_tag']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'si7_glossario';
+
+  /* Display: Tabellone */
+  $handler = $view->new_display('services', 'Tabellone', 'services_3');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenuto: Tipo */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'tabellone' => 'tabellone',
+  );
+  $handler->display->display_options['path'] = 'si7_tabellone';
+
+  /* Display: FAQ */
+  $handler = $view->new_display('services', 'FAQ', 'services_4');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenuto: Tipo */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'faq' => 'faq',
+  );
+  /* Filter criterion: Contenuto: Albero navigazione (field_albero_navigazione) */
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['id'] = 'field_albero_navigazione_tid';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['table'] = 'field_data_field_albero_navigazione';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['field'] = 'field_albero_navigazione_tid';
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['value'] = array(
+    0 => '1214',
+  );
+  $handler->display->display_options['filters']['field_albero_navigazione_tid']['vocabulary'] = 'albero_di_navigazione';
+  $handler->display->display_options['path'] = 'si7_faq_procedimento';
   $translatables['api_faq'] = array(
     t('Master'),
     t('API_faq'),
@@ -267,6 +310,7 @@ function api_content_export_views_default_views() {
     t('FAQ'),
     t('glossario'),
     t('API_glossario'),
+    t('Tabellone'),
   );
   $export['api_faq'] = $view;
 

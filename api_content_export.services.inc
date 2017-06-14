@@ -47,7 +47,14 @@ function api_content_export_default_services_endpoint() {
         ),
       ),
     ),
-    'si7_faq' => array(
+    'si7_faq_faq' => array(
+      'operations' => array(
+        'index' => array(
+          'enabled' => '1',
+        ),
+      ),
+    ),
+    'si7_faq_procedimento' => array(
       'operations' => array(
         'index' => array(
           'enabled' => '1',
@@ -125,6 +132,13 @@ function api_content_export_default_services_endpoint() {
       ),
     ),
     'si7_sardegnasuappagina_tnid_no_0' => array(
+      'operations' => array(
+        'index' => array(
+          'enabled' => '1',
+        ),
+      ),
+    ),
+    'si7_tabellone' => array(
       'operations' => array(
         'index' => array(
           'enabled' => '1',
