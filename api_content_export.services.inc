@@ -152,6 +152,13 @@ function api_content_export_default_services_endpoint() {
         ),
       ),
     ),
+    'si7_utenti' => array(
+      'operations' => array(
+        'index' => array(
+          'enabled' => '1',
+        ),
+      ),
+    ),
     'views' => array(
       'alias' => 'views',
       'operations' => array(
